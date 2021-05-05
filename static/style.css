@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: large;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+header {
+    height: 80px;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%; 
+    background-color: rgb(141, 211, 211);
+    
+}
+.logo {
+    margin-right: auto;
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}
+.main {
+    width: 60vw;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+.my_form {
+    display: flex;
+    flex-direction: column;
+}
+.result {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+    width: 60vw;
+    max-width: 400px;
+    position: relative;
+    background-color: lightgrey;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: large;
+    padding: 20px;
+}
+
+.my_form input[type='text'],
+.my_form input[type='email'] {
+    text-align: center;
+    border: 0;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.my_form input:focus {
+    outline: none;
+}
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(102, 211, 211);
+}
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(102, 211, 211);
+    opacity: 0.7;
+}
+
+a:link, a:visited {
+    color:  rgb(99, 137, 187);
+    text-decoration: none;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    text-align: center;
+    width: 60vw;
+    max-width: 400px;
+    position: relative;
+}
+  
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+  }
+  
+tr:nth-child(odd) {
+    background-color: lightgrey;
+  }
+
+tr:first-child {
+    background-color: rgb(99, 137, 187);
+  }
+
+footer {
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+
+.fas,
+.far {
+     color:white;
+ }
+ 
+.fas:hover,
+.far:hover {
+     color:  rgb(99, 137, 187);
+     transform: scale(1.2);
+ }
+
+.social {
+     display: flex;
+     justify-content: space-between;
+     padding: 40px;
+     width: 300px;
+     z-index: 2;
+ }

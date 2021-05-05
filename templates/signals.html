@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ TRADING - SIGNALS</title>
+</head>
+<div class="container">
+    <body>
+        <video playsinline autoplay muted loop poster="../static/images/coins.png" id="bgvid">
+            <source src="../static/images/coins.webm" type="video/webm">
+            <source src="../static/images/coins.mp4" type="video/mp4">
+          </video>
+          <header>
+            <h1 class="logo"><i class="fas fa-bullseye"></i> MJ TRADING </h1>
+            <nav>
+              <ul class="nav__links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+              </ul>
+            </nav>
+          </header>
+            <main> 
+                {% if msg %}
+                <div class="result"><h3>{{ msg }}</h3></div>
+                 {% else %}
+                 <div class="cpi">
+                     <table>
+                         <tr>
+                             <th>MARKET</th>
+                             <th>RESULT</th>
+                        </tr> 
+                        {% for i in nums %}
+                        <tr>
+                            <td>{{ trend[i][1] }}</td>
+                            <td>{{ trend[i][0] }}</td>
+                        </tr> {% endfor %}
+                    </table>
+                </div> 
+                {% endif %} 
+            </main> 
+            <footer>
+              <div class="social">
+                <a href="http://mjaroszewski.pythonanywhere.com/strategies" target="_blank"><i class="fas fa-chart-line"></i></a>
+                <a href="https://www.trendfollowing.com/" target="_blank"><i class="fas fa-info-circle"></i></a>
+                <a href="https://alvarezquanttrading.com/" target="_blank"><i class="far fa-lightbulb"></i></a>
+                <a href="https://quantpedia.com/" target="_blank"><i class="fas fa-map"></i></a>
+              </div>
+            </footer>
+    </body>
+</div>
+ 
+</html>
